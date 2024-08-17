@@ -2,6 +2,7 @@ services:
   frontend:
     container_name: frontend
     image: devops-static-web/frontend:${TAG:-latest}
+    env_file: .env
     build:
       context: ./frontend
       dockerfile: ../Dockerfile
@@ -9,10 +10,6 @@ services:
         PORT: 3000
     ports:
       - "80:3000"
-    environment:
-      PRODUCTS_SERVICE: "products"
-      SHOPPING_CART_SERVICE: "shopping-cart"
-      MERCHANDISE_SERVICE: "merchandise"
 
   products:
     container_name: products
