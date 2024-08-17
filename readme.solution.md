@@ -14,6 +14,15 @@ this. Ideally i'd recommend exposing all this configuratiosn as environment
 variables, and handle all of them with an speciffic tool like
 [Infisical](https://infisical.com/) or a vault.
 
+
+[!NOTE]
+**There is an error in the frontend:** If you try to access the `view` button
+for `Products`, `Shopping-cart` or `Merchandise` when the url is
+`http://<base_url>/#home`, the address resolution wont work for any of the
+microservices. I think this is related with an issue in the frontend code. I
+lack the knowledge to solve this.
+
+
 ## Dependencies
 
 - GNU make
