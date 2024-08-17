@@ -17,6 +17,7 @@ variables, and handle all of them with an speciffic tool like
 ## Dependencies
 
 - GNU make
+- BASH (or POSIX compliant shell)
 - Docker (=> 27.1.1) with docker compose (=> 2.29.1)
 - Terraform (=> v1.9.2)
 - Ansible (=> 2.17.2)
