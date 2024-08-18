@@ -14,6 +14,9 @@ this. Ideally i'd recommend exposing all this configuratiosn as environment
 variables, and handle all of them with an speciffic tool like
 [Infisical](https://infisical.com/) or a vault.
 
+It seems to me that a [Justfile](https://github.com/casey/just) would be a
+better tool to document and standardize develop and deploy instructions than a
+`Makefile`. Because of its widespread use, I've chosen the latest.
 
 [!NOTE]
 **There is an error in the frontend:** If you try to access the `view` button
