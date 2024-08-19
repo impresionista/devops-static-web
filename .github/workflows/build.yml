@@ -7,6 +7,8 @@ jobs:
     steps:
       - name: Install dependecies
         run: sudo apt install make
+      - name: Check out repository code
+        uses: actions/checkout@v4
       - name: Build docker images
         run: make build
 
