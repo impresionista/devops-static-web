@@ -10,7 +10,9 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Build docker images
-        run: make build
+        run: |
+          cd ${{ github.workspace }};
+          make build
 
 
 
