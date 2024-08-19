@@ -12,6 +12,7 @@ jobs:
       - name: Build docker images
         run: |
           cd ${{ github.workspace }};
+          ls ./
           make build
 
 
