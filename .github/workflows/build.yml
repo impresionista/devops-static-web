@@ -5,7 +5,12 @@ jobs:
   Build-docker-image:
     runs-on: ubuntu-latest
     steps:
-      - run: apt install make
+      - name: Install dependecies
+        run: sudo apt install make
+      - name: Build docker images
+        run: make build
+
+
 
   # Explore-GitHub-Actions:
   #   runs-on: ubuntu-latest
