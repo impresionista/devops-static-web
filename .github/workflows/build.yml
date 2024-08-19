@@ -11,11 +11,15 @@ jobs:
         uses: actions/checkout@v4
       - name: Build docker images
         run: |
-          pwd
-          ls ./
-          cd ${{ github.workspace }}
-          ls ./
+          pwd;
+          ls ./;
+          cd ${{ github.workspace }};
+          ls ./;
           # make build
+      - name: Validate pwd
+        run: |
+          pwd;
+          ls ./;
 
 
 
