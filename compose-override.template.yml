@@ -1,0 +1,21 @@
+services:
+  frontend:
+    volumes:
+      - ./frontend/:/usr/src/app
+    environment:
+      PRODUCTS_SERVICE: "products"
+      SHOPPING_CART_SERVICE: "shopping-cart"
+      MERCHANDISE_SERVICE: "merchandise"
+
+  products:
+    volume:
+      - ./products/:/usr/src/app
+
+  shopping-cart:
+    volume:
+      - ./shopping-cart/:/usr/src/app
+
+  merchandise:
+    image: devops-static-web/merchandise:${TAG:-latest}
+    volume:
+      - ./merchandise/:/usr/src/app

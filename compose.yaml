@@ -1,0 +1,39 @@
+services:
+  frontend:
+    container_name: frontend
+    image: devops-static-web/frontend:${TAG:-latest}
+    env_file: .env
+    build:
+      context: ./frontend
+      dockerfile: ../Dockerfile
+      args:
+        PORT: 3000
+    ports:
+      - "80:3000"
+
+  products:
+    container_name: products
+    image: devops-static-web/products:${TAG:-latest}
+    build:
+      context: ./products
+      dockerfile: ../Dockerfile
+      args:
+        PORT: 3001
+
+  shopping-cart:
+    container_name: shopping-cart
+    image: devops-static-web/shopping-cart:${TAG:-latest}
+    build:
+      context: ./shopping-cart
+      dockerfile: ../Dockerfile
+      args:
+        PORT: 3002
+
+  merchandise:
+    container_name: merchandise
+    image: devops-static-web/merchandise:${TAG:-latest}
+    build:
+      context: ./merchandise
+      dockerfile: ../Dockerfile
+      args:
+        PORT: 3003
